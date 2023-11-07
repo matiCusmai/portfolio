@@ -1,0 +1,261 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 17px;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.aviso {
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: lightgoldenrodyellow;
+}
+
+.contenedor__general {
+    color: #666666;
+    max-width: 800px;
+    padding: 20px;
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.cont__titulo {
+    display: flex;
+}
+
+.descripcion {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 300;
+    padding-top: 15px;
+    padding-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+
+
+.menulink {
+    text-decoration: none;
+    font-size: 14px;
+    color: #0f75fa;
+    font-weight: 700;
+    padding-left: 0px;
+    padding-top: 3px;
+    transition: all .5s ease;
+}
+
+.menulink:hover {
+    color: #ff5100;
+    transition: all .5s ease;
+}
+.menulink:active {
+    color: #ff3300;
+    transition: all .5s ease;
+}
+.menulink.visited{
+    color: #ff3300;
+    transition: all .5s ease;
+}
+.divisores {
+    font-size: 15px;
+    color: #666666;
+}
+
+.portfolio {
+    font-size: 19px;
+    color: #666666;
+    padding-bottom: 20px;
+}
+
+
+/*Carrusel*/
+
+.container-carrusel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* max-height: 100vh; */
+    /* background-color: #e0e0e0; */
+    /* box-shadow: 0 8px 33px 0 rgba(0, 0, 0, 0.33); */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.carruseles {
+    /*cambiar el porcentaje segun cantidad de img ej.: "10 = 1000%", 3 = 300% */
+    width: 1000%;
+    height: 100%;
+    display: flex;
+}
+
+.slider-section {
+    width: calc(100% / 10);
+    /*cambiar la cantidad de imagenes "10" */
+    height: 100%;
+}
+
+.slider-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    /* border-radius: 15px; */
+}
+
+.btn-left,
+.btn-right {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: #9797976c;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ffffff81;
+    transform: translate(0, -50%);
+    transition: .5s ease;
+    user-select: none;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+    background-color: #333333d4;
+    color: white;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+.titulitos {
+    width: 100%;
+    height: auto;
+    background-color: #222222b7;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    bottom: 0;
+position: absolute;
+}
+.titulitos p {
+    font-size: 11px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgb(87, 87, 87);
+    text-decoration: none;
+}
+.slider-section a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    height: 100%;
+}
+
+/*FOOTER*/
+footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.rrss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-rrss {
+    padding-right: 10px;
+    font-size: 25px;
+    color: #666666;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.btn-rrss:hover {
+    color: #ff5100;
+    transition: all .5s ease;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: transparent;
+    transition: all .3s ease;
+    box-shadow: 2px 2px 1px #666666;
+    cursor: pointer;
+    color: #666666;
+    text-decoration: none;
+}
+
+.button:hover {
+    transition: all .3s ease;
+    translate: -2px -2px;
+    box-shadow: 5px 7px 5px 0 rgba(0, 0, 0, 0.29);
+}
+
+.button:hover h4 {
+    color: #ff5100;
+}
+
+.button i {
+    color: #666666;
+    font-size: 20px;
+    margin-right: 7px;
+}
+
+.button:hover i {
+    color: #ff5100;
+}
