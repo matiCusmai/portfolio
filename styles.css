@@ -3,30 +3,29 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    
 }
 
 h1 {
     font-size: 36px;
     font-weight: 800;
-    color:#666666;
+    color: #666666;
 }
 
 h2 {
-    color:#666666;
+    color: #666666;
     font-size: 17px;
     font-weight: 400;
     font-style: italic;
 }
 
 h3 {
-    color:#666666;
+    color: #666666;
     font-size: 14px;
     font-weight: 400;
 }
 
 h4 {
-    color:#666666;
+    color: #666666;
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -59,6 +58,8 @@ body {
 }
 
 
+
+
 header {
     display: flex;
     flex-direction: column;
@@ -78,6 +79,7 @@ header img {
     font-size: 14px;
     font-weight: 300;
     margin-top: 2%;
+    color: #666666;
 }
 
 main {
@@ -211,6 +213,7 @@ nav {
     font-style: italic;
     text-decoration: none;
     margin: 3%;
+    color: #666666;
 }
 
 .slider-section a {
@@ -282,4 +285,33 @@ footer {
 
 .button:hover i {
     color: #ff5100;
+}
+
+@media (max-width: 400px) {
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 10px;
+    }
+    h4 {
+        font-size:  8px;
+    }
+    .descripcion {
+        font-size: 10px;
+    }
+    .menulink {
+
+        font-size: 16px;
+    }
+    .titulitos p {
+        font-size: 9px;
+    }
+  
 }
