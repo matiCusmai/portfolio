@@ -201,7 +201,7 @@ nav {
     background-color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
     bottom: 0;
     position: absolute;
     border-top: 1px solid #99999986;
