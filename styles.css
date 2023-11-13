@@ -288,6 +288,9 @@ footer {
 }
 
 @media (max-width: 400px) {
+    body {
+    overflow-y: scroll;
+    }
 
     h1 {
         font-size: 26px;
