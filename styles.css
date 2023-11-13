@@ -92,12 +92,14 @@ nav {
     margin: 4% 0 0 0;
 }
 
+
 .menulink {
     text-decoration: none;
     font-size: 20px;
     color: #ff3300;
     font-weight: 700;
     transition: all .5s ease;
+    cursor: pointer;
 }
 
 .menulink:hover {
@@ -125,9 +127,6 @@ nav {
 .iframe {
     margin: 3% 0 3% 0;
     border-radius: 15px;
-    /* box-shadow: 1px 0px 32px 5px rgba(255,255,255,0.50);
-    -webkit-box-shadow: 1px 0px 55px 5px rgba(255,255,255,0.50);
-    -moz-box-shadow: 1px 0px 32px 5px rgba(255,255,255,0.50); */
 }
 
 /*Carrusel*/
