@@ -195,25 +195,49 @@ nav {
     right: 10px;
 }
 
-.titulitos {
+.cont__titulitos {
     width: 100vw;
     height: 15%;
     background-color: #ffffff;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+flex-direction: column;
     bottom: 0;
     position: absolute;
     border-top: 1px solid #99999986;
+    padding: auto;
+}
+.titulitos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tecnologia {
+    display: flex;
+    align-items: center;
+    justify-content:center;
 }
 
 .titulitos p {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 400;
     font-style: italic;
+    text-transform:uppercase;
     text-decoration: none;
-    margin: 3%;
+    margin: 10px;
     color: #666666;
+}
+
+.tec {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #6666668f;
+    color: #666666;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    padding: 4px;
+    margin: 4px;
 }
 
 .slider-section a {
