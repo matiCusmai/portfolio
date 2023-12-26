@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="main swiper mySwiper">
+        <div class="wrapper swiper-wrapper">
+            <div class="slide swiper-slide">
+                <img src="img/007.jpg" alt="" class="image" />
+                <div class="image-data">
+                    <span class="text">Gráfica Publicitaria</span>
+                    <h2>Material PoP,<br>
+                        campañas BTL</h2>
+                    <a href="#" class="button">About Us</a>
+                </div>
+            </div>
+
+            <div class="slide swiper-slide">
+                <img src="img/008.jpg" alt="" class="image" />
+                <div class="image-data">
+                    <span class="text">Enjoy the finest coffee drinks.</span>
+                    <h2>Enjoy Our Exclusive <br>
+                        Coffee and Cocktails</h2>
+                    <a href="#" class="button">About Us</a>
+                </div>
+            </div>
+
+            <div class="slide swiper-slide">
+                <img src="img/009.jpg" alt="" class="image" />
+                <div class="image-data">
+                    <span class="text">Enjoy the finest coffee drinks.</span>
+                    <h2>Enjoy Our Exclusive <br>
+                        Coffee and Cocktails</h2>
+                    <a href="#" class="button">About Us</a>
+                </div>
+            </div>
+            
+            <div class="slide swiper-slide">
+                <img src="img/010.jpg" alt="" class="image" />
+                <div class="image-data">
+                    <span class="text">Enjoy the finest coffee drinks.</span>
+                    <h2>Enjoy Our Exclusive <br>
+                        Coffee and Cocktails</h2>
+                    <a href="#" class="button">About Us</a>
+                </div>
+            </div>
+            <div class="slide swiper-slide">
+                <img src="img/011.jpg" alt="" class="image" />
+                <div class="image-data">
+                    <span class="text">Enjoy the finest coffee drinks.</span>
+                    <h2>Enjoy Our Exclusive <br>
+                        Coffee and Cocktails</h2>
+                    <a href="#" class="button">About Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next nav-btn"></div>
+        <div class="swiper-button-prev nav-btn"></div>
+        <div class="swiper-pagination"></div>
+    </section>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script>
+        let swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>
