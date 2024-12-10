@@ -1,0 +1,150 @@
+#wrapper {
+width: 300px;
+height: 250px;
+overflow: hidden;
+background: #ffffff;
+position: relative;
+}
+
+#clickArea {
+display: block;
+width: 300px;
+height: 250px;
+z-index: 1000;
+cursor: pointer;
+position: absolute;
+}
+#border {
+    border: 1px solid #cecece;
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 5;
+  }
+
+#btn {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #000000;
+    /*font-size: 12.5px;*/
+    background: #ffffff;
+    /*padding: 3.5px 8px 4px 8px;*/
+    text-decoration: none;
+    font-family: 'Source Sans 3', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    text-align: center;
+    border: 0px;
+    letter-spacing: 0.01em;
+    }
+
+#btn-spacer {
+height: 20px;
+}
+
+#btn-box {
+    position: absolute;
+    display: inline-block;
+}
+
+.txt {
+font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-style: normal;
+}
+
+.txt-light {
+font-weight: 300;
+}
+
+.txt-regular {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.txt-bold {
+font-weight: 700;
+letter-spacing: -0.01em;
+}
+
+.txt-extrabold {
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+.txt-white {
+color: #ffffff;
+}
+
+.txt-black {
+    color: #000000;
+}
+
+.txt-red {
+color: #cc0000;
+}
+
+.txt1-box {
+    width: 531px;
+    height: 93%;
+    left:24px;
+    text-align: center;
+}
+.txt2-box {
+    width: 531px;
+    height: 105%;
+    left:24px;
+    text-align: center;
+}
+#txt3-box {
+    height: 217%;
+    left: 24px;
+    bottom:-82px;
+}
+
+#txt4-box {
+    height: 100%;
+    left: 24.5px;
+    top: 38px;
+}
+
+#img1, #img2 {
+    width: 300px;
+    height: 250px;
+    top: 0px;
+    z-index: 0;
+}
+#whitelogocontainer{
+    display: block;
+    width: 300px;
+    height: 275px;
+    left: 0px;
+    top:166px;
+    z-index: 2;
+}
+#logos {
+    width: 300px;
+    height: 250px;
+    top: 0px;
+    z-index: 3;
+}    
+
+#txt3a {
+margin-bottom: 5px;	
+}
+
+#txt4-box, #cdw_legacy {
+    z-index: 4;
+}
+
+#logos_pga {    
+    width: 300px;
+    height: 250px;
+    top: 0px;
+    z-index: 4;
+    opacity: 0;
+}

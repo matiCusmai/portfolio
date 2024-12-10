@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+}
+/* .car-titulo {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 40px;
+} */
+.car-slider-box {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.car-slider-box ul {
+    display: flex;
+    padding: 0;
+    width: 300%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+.car-slider-box li {
+    width: 100% ;
+    list-style: none;
+    position: relative;
+}
+.car-texto {
+    position: absolute;
+    text-align: center;
+    padding: 0;
+    top: 2%;
+    left: 45%;
+    color: white;
+}
+.car-texto h2 {
+     font-size: 45px;
+     margin-bottom: 12px;
+     color: greenyellow;
+}
+.car-slider-box img {
+    width: 100% ;
+}
+
+@keyframes slide {
+    0% {
+        margin-left: 0% ;
+    }
+    33% {
+        margin-left: 0% ;
+    }
+    34% {
+        margin-left: -100% ;
+    }
+    66% {
+        margin-left: -100% ;
+    }
+    67% {
+        margin-left: -200% ;
+    }
+    100% {
+        margin-left: -200% ;
+    }
+}
