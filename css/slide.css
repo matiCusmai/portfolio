@@ -121,17 +121,41 @@ a.button:hover {
     background-color: yellowgreen;
 }
 
-
-@media screen and (max-width:768px) {
+@media screen and (max-width:950px) {
     .main {
-        height: 60vh;
+        height: 80vh;
     }
     .image-data h2 {
-        font-size: 33px;
+        font-size: 25px;
+        font-weight: 600;
+        color: #fff;
+    }
+}
+@media screen and (max-width:730px) {
+
+    .image-data h2 {
+        font-size: 18px;
         font-weight: 600;
         color: #fff;
     }
     .nav-btn {
         visibility: hidden;
     }
+}
+@media screen and (max-width:550px) {
+    .main {
+        height: 90vh;
+    }
+    .car-texto h2 {
+        font-size: 17px;
+        margin-bottom: 2px;
+    }
+    .car-texto p {
+        font-size: 8px;
+        line-height: 9px;
+    }
+    .link-behance {
+        padding-top: 0;
+    }
+
 }

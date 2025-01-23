@@ -14,6 +14,9 @@ h1 {
 }
 
 h1 span {
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+  font-weight: 800;
   color: #fff;
 }
 
@@ -31,6 +34,12 @@ h4 {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   color: #fff;
+}
+
+.tx-intro {
+  font-weight: normal; 
+  font-size: 15px; 
+  line-height: 10px;
 }
 
 body {
@@ -169,7 +178,7 @@ header {
 .intro p {
   margin-top: 20px;
   font-family: "Roboto", sans-serif;
-  font-size: clamp(12px, 20px, 36px);
+  font-size: clamp(10px, 20px, 36px);
   color: #0f0f0f;
   padding: 10px 0;
   border-radius: 20px;
@@ -185,21 +194,6 @@ header {
 
 /*  WORK  */
 
-.cont-banners-int {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* padding: 20px 0; */
-}
-.description {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  color: #b3b3b3;
-  width: 50%;
-  padding-right: 15px;
-}
 .cliente {
   font-size: 12px;
   font-weight: 300;
@@ -240,70 +234,70 @@ header {
   border-radius: 10px 10px 0 0;
 }
 .works {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .works-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto; /*  IMPORTANTE:  Altura automática */
-    z-index: -1;
-    background-color: black;
-  }
-  
-  .works-background svg {
-    display: block;
-    opacity: .5;
-    width: 100%;
-    height: auto; /*  IMPORTANTE: Altura automática */
-  }
-  .galery {
-    column-count: 3;
-  }
-  
-  .gal-cont-img img {
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-    margin-bottom: -18px;
-  }
-  .cont-tit-wors {
-    color: white;
-    margin: 0 auto;
-    padding-bottom: 20px;
-    width: 70%;
-    padding-top: 3%;
-  }
-  
-  .cont-tit-wors h3 {
-    text-align: left;
-    font-size: 12px;
-    font-weight: 300;
-    padding-bottom: 8px;
-    letter-spacing: 0.2em;
-  }
-  .cont-gallery {
-    width: 70%;
-    margin: 0 auto;
-    padding: 1% 0 0 0;
-  }
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.works-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto; /*  IMPORTANTE:  Altura automática */
+  z-index: -1;
+  background-color: black;
+}
+
+.works-background svg {
+  display: block;
+  opacity: 0.5;
+  width: 100%;
+  height: auto; /*  IMPORTANTE: Altura automática */
+}
+.galery {
+  column-count: 3;
+}
+
+.gal-cont-img img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: -18px;
+}
+.cont-tit-wors {
+  color: white;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  width: 70%;
+  padding-top: 3%;
+}
+
+.cont-tit-wors h3 {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 300;
+  padding-bottom: 8px;
+  letter-spacing: 0.2em;
+}
+.cont-gallery {
+  width: 70%;
+  margin: 0 auto;
+  padding: 1% 0 0 0;
+}
 .gallery-p-tit {
-    font-size: 21px;
-    font-weight: 500;
-    padding-bottom: 3px;
-    padding-top: 15px;
+  font-size: 21px;
+  font-weight: 500;
+  padding-bottom: 3px;
+  padding-top: 15px;
 }
 .gallery-p {
-    font-size: 12px;
+  font-size: 12px;
 }
 .cont-work-free {
-    background-color: #333333;
-    padding: 15px;
-    border-radius: 0 0 10px 10px;
-    color: white;
+  background-color: #333333;
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+  color: white;
 }
 .link-behance {
   text-align: center;
@@ -319,7 +313,6 @@ header {
   color: greenyellow;
   font-weight: bold;
 }
-
 
 /* CARRUSEL */
 .cont-carrusel {
@@ -340,55 +333,54 @@ header {
   animation: slide 20s infinite alternate ease-in-out;
 }
 .car-slider-box li {
-  width: 100% ;
+  width: 100%;
   list-style: none;
   position: relative;
 }
 .car-texto {
   position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-    z-index: 60;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  z-index: 60;
   color: white;
 }
 .car-texto h2 {
-   font-size: 25px;
-   margin-bottom: 12px;
-   color: greenyellow;
+  font-size: 25px;
+  margin-bottom: 12px;
+  color: greenyellow;
 }
 .car-texto p {
   font-size: 12px;
 }
 .car-slider-box img {
-  width: 100% ;
+  width: 100%;
   border-radius: 10px;
 }
 
 @keyframes slide {
   0% {
-      margin-left: 0% ;
+    margin-left: 0%;
   }
   33% {
-      margin-left: 0% ;
+    margin-left: 0%;
   }
   34% {
-      margin-left: -100% ;
+    margin-left: -100%;
   }
   66% {
-      margin-left: -100% ;
+    margin-left: -100%;
   }
   67% {
-      margin-left: -200% ;
+    margin-left: -200%;
   }
   100% {
-      margin-left: -200% ;
+    margin-left: -200%;
   }
 }
 /* FIN CARRUSEL */
-
 
 .cont-work {
   /* display: flex;
@@ -459,7 +451,6 @@ header {
   height: auto;
   padding-right: 4%;
 }
-
 
 .about p {
   margin-top: 20px;
@@ -559,7 +550,7 @@ header {
 }
 
 .pintado span {
-  font-size: clamp(10px, 15px, 22px);
+  font-size: clamp(10px, 13px, 22px);
   font-weight: 400;
   font-style: italic;
   background-color: rgba(172, 255, 47, 0.5);
@@ -619,7 +610,7 @@ header {
   margin: 0 auto;
   width: 700px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   /* padding: 20px 0; */
 }
@@ -651,12 +642,25 @@ header {
 }
 
 /* RESPONSIVE */
+@media (max-width: 1250px) {
+  .cont-recientes {
+    width: 85%;
+  }
+  .cont-carrusel {
+    width: 85%;
+  }
+}
 
 @media (max-width: 950px) {
   header .oculto-rrss {
     display: none;
   }
-
+  .cont-carrusel {
+    width: 97%;
+  }
+  .cont-recientes {
+    width: 97%;
+  }
   .cont-intro {
     grid-template-columns: 1fr;
   }
@@ -668,6 +672,32 @@ header {
   .cont-div-formacion {
     flex-wrap: wrap;
   }
+  .cont-banners-int {
+    flex-direction: column;
+    width: 100%;
+  }
+  .description {
+    width: 300px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .txt {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .w-h2 {
+    font-size: 16px;
+  }
+  .w-h3 {
+    font-size: 13px;
+  }
+  .w-h4 {
+    font-size: 10px;
+  }
+  .cliente {
+    font-size: 10px;
+    padding-top: 5px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -678,20 +708,33 @@ header {
   .cont-about {
     margin: 5% 0;
   }
+  .cont-about h3 {
+font-size: 30px;
+  }
 
   .cont-div-about {
     grid-template-columns: 1fr;
     margin: 0;
   }
+.cont-intro {
+  height: 90vh;
+}
+
+  .intro {
+    height: auto;
+  }
 
   .intro h2 {
-    font-size: 30px;
+    font-size: 29px;
   }
 
   .intro p {
     margin-top: 10px;
+    font-size: 16px;
   }
-
+  .skills-section div h2 {
+    font-size: 36px;
+  }
   .cont-div-formacion {
     margin: 0 auto;
   }
@@ -711,4 +754,9 @@ header {
     font-size: 18px;
     color: #fff;
   }
+
+  .tx-intro {
+    font-weight: normal; 
+    font-size: 13px; 
+}
 }
