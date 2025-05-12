@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .main {
@@ -146,14 +146,7 @@ a.button:hover {
     .main {
         height: 90vh;
     }
-    .car-texto h2 {
-        font-size: 17px;
-        margin-bottom: 2px;
-    }
-    .car-texto p {
-        font-size: 8px;
-        line-height: 9px;
-    }
+
     .link-behance {
         padding-top: 0;
     }

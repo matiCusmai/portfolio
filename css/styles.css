@@ -1,9 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background: rgb(0, 0, 0);
 }
 
 h1 {
@@ -20,30 +28,17 @@ h1 span {
   color: #fff;
 }
 
-h2 {
-  font-family: "Roboto", sans-serif;
+/* h2 {
   font-weight: 700;
-}
+} */
 
 h3 {
-  font-family: "Roboto", sans-serif;
   font-size: 30px;
 }
 
 h4 {
-  font-family: "Roboto", sans-serif;
   font-size: 12px;
   color: #fff;
-}
-
-.tx-intro {
-  font-weight: normal; 
-  font-size: 15px; 
-  line-height: 10px;
-}
-
-body {
-  background: rgb(0, 0, 0);
 }
 
 /* HEADER NAVBAR */
@@ -58,12 +53,8 @@ header {
   flex-wrap: wrap;
   width: 100%;
   height: 50px;
-  background-color: #0f0f0f;
-  /* background: rgb(56, 68, 75);
-    background: radial-gradient(circle, rgba(56, 68, 75, 1) 0%, rgba(35, 43, 48, 1) 100%); */
-  /* backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px); */
-  padding: 0 20px 0 20px;
+  background-color: #232323;
+  padding: 0 40px 0 40px;
 }
 
 .rrss {
@@ -91,7 +82,7 @@ header {
   justify-content: center;
   align-items: center;
   width: auto;
-  margin-right: 20px;
+  /* margin-right: 20px; */
   border: 1px solid white;
   border-radius: 6px 0 6px 0;
   padding: 5px 10px 5px 10px;
@@ -116,7 +107,7 @@ header {
 }
 
 .btn-eng {
-  margin-right: 0;
+  margin-left: 10px;
 }
 
 .flex {
@@ -136,53 +127,42 @@ header {
 
 /* INTRO */
 .cont-intro {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  height: 90vh;
-  padding: 0 2%;
-  background-image: url("../img/mati.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-attachment: fixed;
+  padding: 5% 20% 0 20%;
+  margin-bottom: 3%;
   background-color: #fff;
+}
+.img-tute img {
+  align-items: center;
+  width: 300px;
 }
 
 .intro {
+  padding: 7% 0 0 1%;
   width: 100%;
-  min-width: 300px;
-  height: 50vh;
-  padding: 5%;
+  /* max-width: 500px; */
 }
 
 .intro h2 {
-  margin-top: 10px;
-  font-size: clamp(32px, 40px, 48px);
+  /* margin-top: 10px; */
+  font-size: 28px;
   font-weight: bold;
   color: #0f0f0f;
 }
 
-.intro h3 {
-  font-size: clamp(20px, 24px, 30px);
-  color: #0f0f0f50;
-}
-
-.intro .yo {
-  font-size: clamp(25px, 28px, 35px);
-  color: greenyellow;
-  text-shadow: 2px 2px 2px black;
-}
-
 .intro p {
-  margin-top: 20px;
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(10px, 20px, 36px);
-  color: #0f0f0f;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 15px;
   padding: 10px 0;
-  border-radius: 20px;
-  background-color: #ffffffbb;
+}
+.intro p span {
+  font-weight: normal;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #0f0f0f;
 }
 
 .resaltar {
@@ -193,6 +173,38 @@ header {
 }
 
 /*  WORK  */
+.cont-recientes {
+  width: 60%;
+  margin: 0 auto;
+  padding: 2% 0;
+  background-color: #333333;
+  border-radius: 10px 10px 0 0;
+}
+.actual {
+  padding: 0 4% 0 4%;
+  width: 100%;
+  color: #fff;
+}
+.actual p {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 300;
+  text-align: left;
+  color: white;
+}
+.proyectos {
+  margin: 0 auto;
+  width: 60%;
+  color: #fff;
+  padding-bottom: 2%;
+}
+.proyectos p {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 300;
+  text-align: left;
+  color: white;
+}
 
 .cliente {
   font-size: 12px;
@@ -218,7 +230,7 @@ header {
 }
 .cont-tit {
   color: #ffffff;
-  margin: 0 20px;
+  margin: 2% 4%;
 }
 .cont-tit h3 {
   font-size: 12px;
@@ -226,13 +238,7 @@ header {
   padding-bottom: 8px;
   letter-spacing: 0.2em;
 }
-.cont-recientes {
-  width: 70%;
-  margin: 0 auto;
-  padding: 4% 0;
-  background-color: #333333;
-  border-radius: 10px 10px 0 0;
-}
+
 .works {
   position: relative;
   width: 100%;
@@ -249,12 +255,6 @@ header {
   background-color: black;
 }
 
-.works-background svg {
-  display: block;
-  opacity: 0.5;
-  width: 100%;
-  height: auto; /*  IMPORTANTE: Altura automática */
-}
 .galery {
   column-count: 3;
 }
@@ -268,7 +268,7 @@ header {
   color: white;
   margin: 0 auto;
   padding-bottom: 20px;
-  width: 70%;
+  width: 60%;
   padding-top: 3%;
 }
 
@@ -316,7 +316,7 @@ header {
 
 /* CARRUSEL */
 .cont-carrusel {
-  width: 70%;
+  width: 88%;
   margin: 0 auto;
 }
 
@@ -353,12 +353,13 @@ header {
   color: greenyellow;
 }
 .car-texto p {
-  font-size: 12px;
+  font-size: 14px;
 }
 .car-slider-box img {
   width: 100%;
   border-radius: 10px;
 }
+
 
 @keyframes slide {
   0% {
@@ -433,8 +434,8 @@ header {
 }
 
 .cont-about h3 {
-  font-size: clamp(30px, 40px, 48px);
-  color: greenyellow;
+  font-size: 25px;
+  color: rgb(156, 173, 131);
   text-align: center;
   padding-bottom: 2%;
 }
@@ -539,7 +540,7 @@ header {
 
 .skills-section div h2 {
   color: #0f0f0f;
-  font-size: clamp(30px, 40px, 48px);
+  font-size: 30px;
 }
 
 .cont-cuadros {
@@ -644,14 +645,18 @@ header {
 /* RESPONSIVE */
 @media (max-width: 1250px) {
   .cont-recientes {
-    width: 85%;
-  }
-  .cont-carrusel {
-    width: 85%;
+    width: 88%;
   }
 }
 
 @media (max-width: 950px) {
+  .proyectos {
+    width: 92%;
+    padding-bottom: 2%;
+  }
+  .cont-tit-wors {
+    width: 92%;
+  }
   header .oculto-rrss {
     display: none;
   }
@@ -659,30 +664,23 @@ header {
     width: 97%;
   }
   .cont-recientes {
-    width: 97%;
+    width: 88%;
   }
   .cont-intro {
-    grid-template-columns: 1fr;
+    padding: 5% 5% 0 10%;
   }
 
   .formacion {
     margin: 3% 0;
   }
 
-  .cont-div-formacion {
-    flex-wrap: wrap;
-  }
-  .cont-banners-int {
-    flex-direction: column;
-    width: 100%;
-  }
   .description {
     width: 300px;
     padding-left: 0;
     padding-right: 0;
   }
   .txt {
-    font-size: 10px;
+    font-size: 11px;
     line-height: 14px;
   }
   .w-h2 {
@@ -699,48 +697,85 @@ header {
     padding-top: 5px;
   }
 }
+@media (max-width: 850px) {
+/* .proyectos {
+  width: 92%;
+  padding-bottom: 2%;
+}
+.cont-tit-wors {
+  width: 92%;
+} */
+.cont-banners-int {
+  flex-direction: column;
+  width: 100%;
+}
 
+}
 @media (max-width: 550px) {
   header .oculto {
     display: none;
   }
 
   .cont-about {
-    margin: 5% 0;
+    margin: 7% 0 0 0;
   }
   .cont-about h3 {
-font-size: 30px;
+    font-size: 19px;
   }
 
   .cont-div-about {
     grid-template-columns: 1fr;
     margin: 0;
   }
-.cont-intro {
-  height: 90vh;
-}
+  .cont-intro {
+    flex-wrap: wrap;
+    padding: 15% 0 0 0;
+    margin-bottom: 0;
+  }
 
   .intro {
     height: auto;
+    padding: 10px 3%;
   }
 
   .intro h2 {
-    font-size: 29px;
+    font-size: 26px;
   }
 
   .intro p {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 14px;
   }
-  .skills-section div h2 {
-    font-size: 36px;
+  .intro p span {
+    font-size: 12px;
   }
-  .cont-div-formacion {
+
+  .cont-recientes {
+    width: 100%;
+    padding: 5% 0;
+    margin: 0;
+  }
+
+  .skill-blok {
+    margin-right: 0px;
+  }
+  .skills-section {
+    width: 94%;
     margin: 0 auto;
   }
 
+  .skills-section div h2 {
+    font-size: 34px;
+  }
+  .cont-div-formacion {
+    margin: 0 auto;
+    display: block;
+  }
+
   .formacion {
-    margin: 3% 0;
+    margin: 3%;
+  width: 94%;
+
   }
 
   .about h3 {
@@ -756,7 +791,40 @@ font-size: 30px;
   }
 
   .tx-intro {
-    font-weight: normal; 
-    font-size: 13px; 
-}
+    font-weight: normal;
+    font-size: 13px;
+  }
+  .cont-ifr {
+    margin: 0;
+    text-align: center;
+  }
+  .cont-banners-int {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .car-slider-box {
+    width: 92%;
+    margin-top: 13px;
+  }
+
+  .car-slider-box img {
+    height: 295px; /* Define la altura deseada para móviles */
+    object-fit: cover; /* Recorta la imagen y la llena */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+    border-radius: 10px;
+  }
+
+  .cont-carrusel {
+    width: 100%;
+  }
+  .cont-tit-wors {
+    padding-bottom: 8px;
+    padding-top: 10%;
+    width: 92%;
+  }
+  .proyectos {
+    width: 92%;
+    padding-bottom: 2%;
+  }
 }
