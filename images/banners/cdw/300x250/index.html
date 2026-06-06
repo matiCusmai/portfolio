@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="ad.size" content="width=300,height=250">
+      <meta name="viewport" content="width=device-width">
+      <title>Ad: CDW</title>
+      <script src="gsap.min.js"></script>
+      <script src="SplitText.min.js"></script>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800;900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+      <link href="custom_input/style.css" rel="stylesheet">
+      <style>
+         body,
+         html {
+         margin: 0;
+         padding: 0;
+         }
+         #content {
+         position: relative;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         visibility:hidden;
+         }
+         /* ALIGNMENT */
+         .center {
+         left: 0;
+         right: 0;
+         margin: 0 auto;
+         }
+         .flex-col {
+         display: flex;
+         flex-direction: column;
+         }
+         .flex-row {
+         display: flex;
+         flex-direction: row;
+         }
+         .justify-center {
+         justify-content: center;
+         }
+         .align-center {
+         align-items: center;
+         }
+         /* END ALIGNMENT */
+         .pos-abs {
+         position: absolute;  
+         }
+         .bg {
+         width: 100%;
+         height: 100%;
+         top: 0px;
+         }
+         /*ACCESSIBILITY STYLING*/
+         .sr-only {
+         position:absolute;
+         left:-10000px;
+         top:auto;
+         width:1px;
+         height:1px;
+         overflow:hidden;
+         z-index: 200;
+         }
+         /*END ACCESSIBILITY STYLING*/
+         sup.r {
+         font-size: 50%;
+         vertical-align: text-top;
+         top: 0.25em;
+         position: relative;
+         }
+         sup.tm {
+         font-size: 70%;
+         vertical-align: text-top;
+         top: 0.25em;
+         position: relative;
+         }
+         sup.tuck {
+         width: 0.2em;
+         }
+         sup.inline {
+         display: inline;
+         }
+         sup.inline-block {
+         display: inline-block;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="wrapper">
+         <a onclick="refrescarPagina()" id="clickArea">
+            <!-- INSIDE ANCHOR-->
+            <div id="sr-text" class="sr-only"></div>
+         </a>
+         <div id="content">
+            <img id="img1" class="pos-abs" src="img/img1.jpg">
+            <!-- <img id="test" class="pos-abs" src="img/test.png" style="height: 250px; opacity: 0.5; z-index: 999;"> -->
+            <img id="img2" class="pos-abs" src="img/img2.jpg">
+            <img id="whitelogocontainer" class="pos-abs" src="img/whitelogocontainer.png">
+            <img id="logos" class="pos-abs" src="img/logos.png">
+            <div id="btn-box">
+               <a id="btn" href=""></a>
+            </div>
+            <div id="f1">
+               <div class="pos-abs flex-col justify-center txt1-box">
+                  <div id="txt1a" class="txt txt-extrabold txt-white" style="letter-spacing: 0.5px;"></div>
+                  <div id="txt1align"></div>
+               </div>
+            </div>
+            <div id="f2">
+               <div class="pos-abs flex-col justify-center txt2-box">
+                  <div id="txt2a" class="txt txt-extrabold txt-white" style="letter-spacing: 0.5px;"></div>
+                  <div id="txt2align"></div>
+               </div>
+            </div>
+            <div id="f3">
+               <div id="txt3-box" class="pos-abs flex-col justify-center">
+                  <div id="txt3a" class="txt txt-extrabold txt-white" style="letter-spacing: 0.7px;"></div>
+               </div>
+            </div>
+            <div id="f4">
+               <div id="txt4-box" class="pos-abs flex-col justify-center">
+                  <div id="txt4a" class="txt txt-light txt-black"></div>
+               </div>
+               <img id="cdw_legacy" class="pos-abs bg" src="img/cdw_legacy.png">
+            </div>
+         </div>
+         <div id="border"></div>
+      </div>
+      <script src="custom_input/customInput.js"></script>
+      <script>
+         // use a script tag or an external JS file
+         document.addEventListener("DOMContentLoaded", (event) => {
+          gsap.registerPlugin(SplitText)
+          // gsap code here!
+         });
+        
+        </script>
+      <script>
+         //set #content to visible right before timeline starts
+         TweenLite.set("#content", {visibility:"visible"});
+         
+         // CUSTOM INPUT SETTINGS     
+         
+            document.getElementById("txt1a").innerHTML = txt1aInput
+            document.getElementById("txt1a").style.fontSize = txt1Size + "px";
+            document.getElementById("txt1a").style.lineHeight = txt1LineHeight;
+            document.getElementById("txt1a").style.textAlign = txt1aTextAlign;
+            document.getElementById("txt1align").innerHTML = txt1alignInput
+            document.getElementById("txt1align").style.lineHeight = txt1alignLineHeight;
+
+            document.getElementById("txt2a").innerHTML = txt2aInput
+            document.getElementById("txt2a").style.fontSize = txt2Size + "px";
+            document.getElementById("txt2a").style.lineHeight = txt2LineHeight;
+            document.getElementById("txt2a").style.textAlign = txt2aTextAlign;
+            document.getElementById("txt2align").innerHTML = txt2alignInput
+            document.getElementById("txt2align").style.lineHeight = txt2alignLineHeight;
+         
+            document.getElementById("txt3a").innerHTML = txt3aInput;
+            document.getElementById("txt3a").style.fontSize = txt3aSize + "px";
+            document.getElementById("txt3a").style.lineHeight = txt3aLineHeight;
+            document.getElementById("txt3a").style.marginBottom = txt3aSpacer + "px";
+         
+            document.getElementById("txt4a").innerHTML = txt4aInput
+            document.getElementById("txt4a").style.fontSize = txt4aSize + "px";
+            document.getElementById("txt4a").style.lineHeight = txt4aLineHeight;
+            document.getElementById("txt4a").style.width = txt4aWidth + "px";
+            document.getElementById("txt4a").style.marginBottom = txt4aSpacer + "px";
+         
+            document.getElementById("btn").innerHTML = ctaInput;
+            document.getElementById("btn").style.fontSize = ctaSize + "px";
+            document.getElementById("btn").style.padding = ctaPadding;
+            document.getElementById("btn-box").style.top = ctaTop;
+            document.getElementById("btn-box").style.left = ctaLeft;
+         
+            document.getElementById("sr-text").innerHTML = txt1aInput + " " + txt2aInput + " " + txt3aInput + " "+ txt4aInput + " " + pgaLogoAlt + " " + "Click to " + ctaInput;
+         
+         // ---------------------------------------------
+
+            var mainTimeline = new TimelineMax({repeat:0});
+            var ctaTimeline = new TimelineMax({repeat:0});
+            var frame01text = new SplitText("#txt1a", {type:"chars,words,lines", position:"relative"});
+            var frame02text = new SplitText("#txt2a", {type:"chars,words,lines", position:"relative"});
+            var frame03text = new SplitText("#txt3a", {type:"chars,words,lines", position:"relative"});
+            var frame04text = new SplitText("#txt4a", {type:"chars,words,lines", position:"relative"});
+         
+            function item(name) {
+               return document.querySelector(name);
+            }
+         
+            function anim1(){
+               var tl=new TimelineMax();
+               //animate banner
+               tl
+                  // .add(heightDistanceTime, "frame1")
+                  .add("frame1")
+                  .staggerFrom(frame01text.lines, .7,{ x: -500, ease: Power1.easeOut, stagger:0.2}, "frame1+=.2")
+                  .to('#txt1a', .7,{ opacity: 0, ease: Power1.easeOut }, "frame1+=2.5")
+                  .set({}, {}, "+=0");
+               // console.log("anim1:" + tl.duration());
+               return tl;
+            }
+
+            function anim2(){
+               var tl=new TimelineMax();
+               //animate banner
+               tl
+                  .add("frame2")
+                  .from('#img2', .3,{ opacity:0, ease: Power1.easeOut }, "frame3+=.2")
+                  .staggerFrom(frame02text.lines, .7,{ x: -500, ease: Power1.easeOut, stagger:0.2}, "frame2+=.2")
+                  .to('#txt2a', .7,{ opacity: 0, ease: Power1.easeOut }, "frame2+=2.5")
+                  .set({}, {}, "+=0");
+               // console.log("anim3:" + tl.duration());
+               return tl;
+            }
+
+            function anim3(){
+               var tl=new TimelineMax();
+               //animate banner
+               tl
+                  .add("frame3")
+                  //.set('#bg02',{ opacity:1}, "frame3+=0")
+                  .staggerFrom(frame03text.lines, .7,{ x: -500, ease: Power1.easeOut, stagger:0.2}, "frame3+=.2")
+                  // .to("#btn-box", .4, {scaleX: 1.1, scaleY: 1.2, ease: Power1.easeInOut}, "frame3+=2.7")
+                  .to("#btn-box", .5, {scaleX: 1, scaleY: 1, ease: Power1.easeInOut}, "frame3+=1.5")
+                  .set({}, {}, "+=.5");
+               // console.log("anim3:" + tl.duration());
+               return tl;
+            }
+         
+            function anim4(){
+               var tl=new TimelineMax();
+               //animate banner
+               tl
+                  .add("frame4")
+                  .to('#whitelogocontainer', .5,{ y: -190, ease: Power1.easeOut }, "frame4+=0.2")
+                  .to('#cdw_legacy', .2,{ opacity: 1, ease: Power1.easeOut }, "frame4+=1.2")
+                  .staggerFrom(frame04text.lines, .7,{ x: -500, ease: Power1.easeOut, stagger:0.2}, "frame4+=0.4")
+                  .set('#btn', {color: "#fff", backgroundColor: "#cc0000"})
+                  .set('#btn-box', {y: 16, zIndex: 4, opacity: 0})
+               
+               // console.log("anim3:" + tl.duration());
+               return tl;
+            }
+         
+            // function heightDistanceTime(){
+            //    var tl=new TimelineMax();
+            //    //animate banner
+            //    tl.delay(1.4).timeScale( 2.3 )
+            //       .add("heightDistanceTime")
+            //       .from("#heightdistancetime2", .9, { x: -10, ease: Power1.easeInOut}, "heightDistanceTime+=0.4")
+            //       .from("#heightdistancetime3", .9, { x: -10, ease: Power1.easeInOut}, "heightDistanceTime")
+            //       .from("#heightdistancetime4", .9, { x: -10, ease: Power1.easeInOut}, "heightDistanceTime+=0.8")
+            //    ;
+            
+            //         // console.log("heightDistanceTime:" + tl.duration());
+            //         return tl;
+            // }
+         
+         
+         function animCta() {
+           var tl = new TimelineMax();
+
+           tl
+              .to("#btn-box", .2, {opacity: 1, ease: Power1.easeInOut})
+              .to("#btn-box", .4, {scaleX: 1.1, scaleY: 1.2, ease: Power1.easeInOut})
+              .to("#btn-box", .5, {scaleX: 1, scaleY: 1, ease: Power1.easeInOut})
+              ;
+         
+            // console.log("animCta:" + tl.duration());
+           return tl;
+         }
+            // TIMELINE MAIN
+            mainTimeline.set("#f1", {opacity: 1 });
+            mainTimeline.set("#cdw_legacy", {opacity: 0 });
+            mainTimeline.add(anim1(), "+=.4");
+            mainTimeline.add(anim2(), "+=0");
+            mainTimeline.add(anim3(), "+=.5");
+            mainTimeline.add(anim4(), "+=0.7");
+            mainTimeline.add(animCta(), "+=.3");
+         
+            console.log(mainTimeline.duration()); 
+            //Check entire duration
+         
+            // ROLLOVER
+            //item('#wrapper').addEventListener('mouseover', function() {
+            //ctaTimeline.add(animCta());
+            //ctaTimeline.seek(0);
+            //});
+         
+      </script>
+       
+      <script src="custom_input/pause.js"></script>
+      <script>
+         function refrescarPagina() {
+             location.reload();
+         }
+     </script>
+   </body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LNC-Banner-300x450</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos generales del banner */
+        #banner {
+            position: relative;
+            width: 300px;
+            max-width: 300px;
+            height: 450px;
+            max-height: 450px;
+            background-color: #f3f3f3;
+            border: 1px solid white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: #018560;
+        }
+
+        /* Estilos de la imagen header*/
+        .cont-img {
+            width: 298px;
+            height: 104px;
+            overflow: hidden;
+        }
+
+        .cont-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Estilos del contenedor principal de datos */
+
+        .dina-cont {
+            display: inline-block;
+            height: 250px;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 3px;
+        }
+
+
+        /* Estilos del menú de navegación */
+        nav {
+            display: inline-block;
+            width: 100%;
+            padding: 8px 0;
+            margin-bottom: 15px;
+            background-color: white;
+            border: #cecece 1px solid;
+            border-radius: 8px;
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0 10px;
+            margin-left: 8px;
+            /* overflow: hidden; */
+        }
+
+        nav li {
+            float: left;
+            margin: 0 3px;
+        }
+
+        nav a {
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            color: #81c1b0;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 0;
+            margin: 0 8px;
+        }
+
+        nav a:hover {
+            color: #008561;
+        }
+
+        nav ul li a.active {
+            background-color: #fff;
+            color: #008561;
+            border-bottom: 3px solid #008561;
+            padding-bottom: 3px;
+        }
+
+        nav ul li:last-child {
+            margin-left: auto;
+        }
+
+
+
+        /* Estilos de los contenedores de datos individuales */
+        .data-container {
+            display: inline-block;
+            width: 100%;
+            padding: 4px 8px;
+            margin: 4px 0;
+            text-align: left;
+            background-color: white;
+            border: #fff 1px solid;
+            border-radius: 8px;
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .margin-left {
+            margin-left: 3px;
+        }
+
+        .data {
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: left;
+            color: #018560;
+            margin-right: 10px;
+        }
+
+        .var {
+            background-color: transparent;
+            color: #018560;
+            font-size: 12px;
+            padding: 4px;
+        }
+
+        .red-txt {
+            color: red;
+        }
+
+        .black {
+            color: #7c7c7c;
+        }
+
+        .arrow {
+            margin-top: 5px;
+            height: 20px;
+        }
+
+        .cont-logo-btn {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+
+
+
+        .btn {
+            margin: 10px 0;
+            padding: 10px 17px;
+            border: 2px solid #008561;
+            border-radius: 5px;
+            background-color: transparent;
+            color: #008561;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+        }
+
+        /* .btn:hover {
+            border: 2px solid white;
+            background-color: #008561;
+            color: white;
+        } */
+
+        .logo {
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+        }
+
+
+
+        .margin {
+            margin: 0 30px;
+        }
+
+        .cont-fecha {
+            padding: 7px 10px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 9px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="banner">
+        <!-- Imagen de campo -->
+        <div class="cont-img">
+            <img src="img-01.jpg" alt="La Nacion Campo">
+        </div>
+        <!-- Enlaces nav -->
+        <div class="dina-cont">
+            <div>
+                <nav>
+                    <ul>
+                        <li><a id="soja" onclick="mostrarData ('soja')" href="#">Soja</a></li>
+                        <li><a id="trigo" onclick="mostrarData ('trigo')" href="#">Trigo</a></li>
+                        <li><a id="maiz" onclick="mostrarData ('maiz')" href="#">Maíz</a></li>
+                        <li><a id="sorgo" onclick="mostrarData ('sorgo')" href="#">Sorgo</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="container">
+                <!-- Aquí se mostrará el contenido según el enlace seleccionado -->
+            </div>
+        </div>
+        <div class="cont-logo-btn">
+
+            <!-- BUTTON <button onclick="refrescarPagina()">Refrescar página</button>-->
+            <div>
+                <a id="clicktag" onclick="refrescarPagina()" class="btn">VER MÁS</a>
+            </div>
+
+            <!-- LOGO -->
+            <div>
+                <img src="logo.jpg" class="logo" alt="Logo RAGT">
+            </div>
+
+        </div>
+        <!-- fecha actualizacion -->
+        <div class="flex cont-fecha">
+            <div class="fecha" id="fecha-actualizacion"></div>
+            <div class="grassi">POWERED BY GRASSI</div>
+        </div>
+    </div>
+
+    <script data-exports-type='dclk-quick-preview'>
+
+        if (typeof studio !== 'undefined' && studio.Enabler) {
+
+            studio.Enabler.setRushSimulatedLocalEvents(true);
+
+        }
+
+    </script>
+    <script>
+        function refrescarPagina() {
+            location.reload();
+        }
+    </script>
+    <!-- <script>
+
+        function adcase_click() {
+
+            window.top.postMessage({ msg: 'adcase_click', format: 'html5' }, '*');
+
+            window.open(clickTag, '_blank')
+
+        }
+
+        var clickTag = 'http://www.url-del-anunciante.com';
+
+    </script> -->
+
+    <script src="js/body.js"></script>
+
+
+</body>
+
+</html>
