@@ -1,488 +1,273 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Matias Cusmai | Visual Designer &amp; Dev</title> 
+    <!-- Google Fonts Inter y Playfair --> 
+    <link href="https://googleapis.com" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+    <nav class="navbar"> 
+        <a href="#" class="logo">Matias Cusmai</a> 
+        <ul class="nav-links" id="nav-links"> 
+            <li><a href="#about" data-key="nav-about">Acerca de mí</a></li> 
+            <li><a href="#skills" data-key="nav-skills">Skills</a></li> 
+            <li><a href="#works" data-key="nav-works">Trabajos</a></li> 
+            <li><a href="#contact" data-key="nav-contact">Contacto</a></li> 
+            <li class="nav-item-lang"><button class="btn-lang" id="lang-btn">ES / EN</button></li> 
+        </ul> 
+        <div class="menu-toggle" id="mobile-menu"> 
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span> 
+        </div> 
+    </nav> 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/slide.css" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Portfolio Matias Cusmai 2024</title>
-</head>
+    <header class="hero"> 
+        <div class="hero-waves"> 
+            <div class="wave w1"></div> 
+            <div class="wave w2"></div> 
+            <div class="wave w3"></div> 
+        </div> 
+        <div class="hero-content"> 
+            <img src="images/tute-bn.png" alt="Matias Cusmai" class="hero-img"> 
+            <h1>Matias Cusmai</h1> 
+            <p class="tagline">Visual Designer &amp; Front-end Developer</p> 
+            <p class="sub-tagline" data-key="hero-sub">Especializado en UX/UI, Motion Graphics e implementación de IA.</p> 
+            <!-- <a href="cv.pdf" download="" class="btn-primary btn-cv" data-key="hero-cv">Descargar CV</a>  -->
+        </div> 
+    </header> 
 
-<body>
-    <header>
-        <div class="flex">
-            <!-- <div class="btn-rrss">
-                <i class='bx bx-menu'></i>
-            </div> -->
-            <div>
-                <h1>MATIAS<span>CUSMAI</span></h1>
-            </div>
-        </div>
-        <div class="rrss oculto-rrss">
-            <a title="Gmail: maticusmai@gmail.com" href="mailto:maticusmai@gmail.com" target="_blank" class="btn-rrss">
-                <i class='bx bxl-gmail'></i>
-            </a>
-            <a title="Wsp: 1130195479" class="btn-rrss" href="https://api.whatsapp.com/send?phone=541130195479"
-                target="_blank">
-                <i class='bx bxl-whatsapp'></i>
-            </a>
-            <a title="Behance" class="btn-rrss" href="https://www.behance.net/maticusmai" target="_blank">
-                <i class='bx bxl-behance'></i>
-            </a>
-            <a title="Github" class="btn-rrss" href="https://github.com/maticusmai" target="_blank">
-                <i class='bx bxl-github'></i>
-            </a>
-            <a title="Linkedin" class="btn-rrss" href="https://www.linkedin.com/in/maticusmai/" target="_blank">
-                <i class='bx bxl-linkedin-square'></i>
-            </a>
-        </div>
-        <div class="flex">
-            <a class="button-header oculto" href="img/MatiasCusmai_cv_2025.pdf" download="Curriculum_Vitae" target="_blank">
-                <h4>CURRICULUM VITAE</h4>
-            </a>
-            <a class="button-header btn-eng" title="ENGLISH" href="index_eng.html" target="_parent">
-                <h4>ENG</h4>
-            </a>
-        </div>
-    </header>
+    <section id="about" class="section-alt"> 
+        <div class="container"> 
+            <h2 class="section-title" data-key="about-title">Sobre mi enfoque</h2> 
+            <p class="about-text" data-key="about-p">Fusiono la creatividad del <strong>diseño gráfico</strong> con la precisión del <strong>desarrollo web</strong>. Mi perfil híbrido me permite diseñar interfaces intuitivas (UX/UI) y darles vida a través del código. Actualmente, integro la <strong>Inteligencia Artificial</strong> para optimizar procesos creativos. </p> 
+        </div> 
+    </section> 
 
-    <main class="main-html">
-        <section class="cont-intro">
-            <div class="img-tute"> <img src="../img/mati.png" alt=""></div>
-            <div class="intro">
-                <h2>Diseñador gráfico <br> y desarrollador front-end</h2>
-                <p>Llevo más de una década creando soluciones visuales para marcas líderes
-                    como Coca Cola,
-                    Unilever y La Nación. Cuento con experiencia en agencias de publicidad, estudios de diseño y
-                    proyectos freelance. <br><br><span>
-                        Soy un profesional versátil, organizado y proactivo, enfocado en el aprendizaje continuo y la
-                        resolución de desafíos. Tengo experiencia en la creación de piezas para medios impresos y
-                        digitales, incluyendo tanto elementos estáticos como animaciones en 2D y desarrollo front-end.
-                    </span> <br><br>
-                    <!-- <span class="resaltar"> Te invito a recorrer
-                        mi Portfolio. </span> -->
-                </p>
-            </div>
-        </section>
-
-        <section class="works">
-
-            <div class="cont-recientes">
-
-                <div class="cont-tit">
-                    <h3>PROYECTOS RECIENTES</h3>
-                    <hr>
-                </div>
-
-                <div class="actual">
-                    <p>En mi puesto actual como Banner Developer en Hogarth Worldwide Argentina, me especializo en el
-                        desarrollo de DCO (Dynamic Creative Optimization) y banners estándar.
-                        Recientemente, la mayor parte de mi trabajo se ha enfocado en el desarrollo de másters y
-                        versiones en ICP (Intelligence Content Platform). Por razones de confidencialidad, no puedo
-                        compartir ejemplos de estos proyectos.</p>
-                </div>
-                <div class="cont-banners-int" style="margin-top: 40px;">
-
-                    <div class="cont-ifr">
-                        <iframe src="img/banners/ln/300x450/index.html"
-                            style="width: 300px; height: 460px; border: none;"></iframe>
-                    </div>
-
-                    <div class="description">
-                        <p class="cliente">Cliente:</p>
-                        <div class="w-h2">La Nación Campo</div>
-                        <h3 class="w-h3" style="color: rgba(172, 255, 47, 0.549);">Anuncio Dinámico - consumo de API
-                        </h3>
-                        <p class="txt txt-left" style="margin-bottom: 15px;">Desarrollé un anuncio
-                            interactivo con contenido dinámico en
-                            tiempo real. Integrando la API de "La Nación
-                            Campo", y ofreciendo información actualizada y relevante que mejora la
-                            experiencia del usuario. Este proyecto fue realizado
-                            utilizando HTML, CSS y
-                            Javascript.
-                        </p>
-                        <div class="w-h4">By HOGARTH ARGENTINA</div>
-                    </div>
-                </div>
-                <br><br><br>
-                <hr><br><br>
-                <div class="cont-recientes-int image-data">
-                    <div class="cont-banners-int">
-
-                        <div class="cont-ifr">
-                            <p class="txt txt-left" style="font-size: 8px; color: white;">Click to replay ⇩
-                            </p>
-                            <iframe src="img/banners/cdw/300x250/index.html"
-                                style="width: 300px; height: 250px; border: none;"></iframe>
-                        </div>
-
-                        <div class="description">
-                            <p class="cliente">Cliente:</p>
-                            <div class="w-h2">CDW - Lenovo</div>
-                            <h3 class="w-h3" style="color: rgba(172, 255, 47, 0.549);">Anuncio Animado con GSAP.</h3>
-                            <p class="txt txt-left" style="margin-bottom: 15px;">Banner para Google Ads,
-                                realizado con HTML5, CSS y JavaScript. Animaciones con
-                                GSAP. Adaptación a múltiples medidas para varios
-                                dispositivos.
-                            </p>
-                            <div class="w-h4">By HOGARTH ARGENTINA</div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-
-
-                <!-- <div class="main swiper mySwiper">
-                    <div class="wrapper swiper-wrapper">
-
-                        <div class="slide swiper-slide">
-                            <div class="cont-recientes-int image-data">
-                                <div class="cont-banners-int">
-
-                                    <div class="cont-ifr">
-                                        <iframe src="img/banners/ln/300x450/index.html"
-                                            style="width: 300px; height: 460px; border: none;"></iframe>
-                                    </div>
-
-                                    <div class="description">
-                                        <p class="cliente">Cliente:</p>
-                                        <div class="w-h2">La Nación Campo</div>
-                                        <h3 class="w-h3">Anuncio Dinámico - consumo de API</h3>
-                                        <p class="txt txt-left" style="margin-bottom: 15px;">Desarrollé un anuncio
-                                            interactivo con contenido dinámico en
-                                            tiempo real. Integrando la API de "La Nación
-                                            Campo", y ofreciendo información actualizada y relevante que mejora la
-                                            experiencia del usuario. Este proyecto fue realizado
-                                            utilizando HTML, CSS y
-                                            Javascript.
-                                        </p>
-                                        <div class="w-h4">By HOGARTH ARGENTINA | 2024</div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="slide swiper-slide">
-                            <div class="cont-recientes-int image-data">
-                                <div class="cont-banners-int">
-                                    <div class="cont-ifr">
-                                        <p class="txt txt-left" style="font-size: 8px; color: white;">Click to replay ⇩
-                                        </p>
-                                        <iframe src="img/banners/coca/300x250/index.html"
-                                            style="width: 300px; height: 250px; border: none;"></iframe>
-                                    </div>
-                                    <div class="description">
-                                        <p class="cliente">Cliente:</p>
-                                        <div class="w-h2">Coca-Cola | Marvel</div>
-                                        <h3 class="w-h3">Anuncio Animado Standard HTML5.</h3>
-                                        <p class="txt txt-left" style="margin-bottom: 15px;">Banner
-                                            adaptable a diversos tamaños para Google Ads. Animación y desarrollo
-                                            realizados con Google Web Designer. Optimización de imagenes.
-                                        </p>
-                                        <div class="w-h4">By HOGARTH ARGENTINA | 2024</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="slide swiper-slide">
-                            <div class="cont-recientes-int image-data">
-                                <div class="cont-banners-int">
-
-                                    <div class="cont-ifr">
-                                        <p class="txt txt-left" style="font-size: 8px; color: white;">Click to replay ⇩
-                                        </p>
-                                        <iframe src="img/banners/cdw/300x250/index.html"
-                                            style="width: 300px; height: 250px; border: none;"></iframe>
-                                    </div>
-
-                                    <div class="description">
-                                        <p class="cliente">Cliente:</p>
-                                        <div class="w-h2">CDW - Lenovo</div>
-                                        <h3 class="w-h3">Anuncio Animado con GSAP.</h3>
-                                        <p class="txt txt-left" style="margin-bottom: 15px;">Banner para Google Ads,
-                                            realizado con HTML5, CSS y JavaScript. Animaciones con
-                                            GSAP. Adaptación a múltiples medidas para varios
-                                            dispositivos.
-                                        </p>
-                                        <div class="w-h4">By HOGARTH ARGENTINA | 2024</div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide swiper-slide">
-                            <div class="cont-recientes-int image-data">
-                                <div class="cont-banners-int">
-
-                                    <div class="cont-ifr">
-                                        <p class="txt txt-left" style="font-size: 8px; color: white;">Click to replay ⇩
-                                        </p>
-                                        <iframe src="img/banners/milka/300x250/index.html"
-                                            style="width: 300px; height: 250px; border: none;"></iframe>
-                                    </div>
-
-                                    <div class="description">
-                                        <p class="cliente">Cliente:</p>
-                                        <div class="w-h2">Milka</div>
-                                        <h3 class="w-h3">Banner Animado Standard.</h3>
-                                        <p class="txt txt-left" style="margin-bottom: 15px;">HTML5 animado
-                                            con Google Web Designer. Se importaron y animaron assets desde un PSD
-                                            optimizando las imágenes. Adaptación a
-                                            diferentes tamaños.
-                                        </p>
-                                        <div class="w-h4">By HOGARTH ARGENTINA | 2024</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="swiper-button-next nav-btn"></div>
-                    <div class="swiper-button-prev nav-btn"></div>
-                    <div class="swiper-pagination"></div>
-                </div>
-
-            </div> -->
-
-        </section>
-
-        <section style="background-color: rgb(115 115 115); height: auto; padding-bottom: 8%; border-top: solid 3px #999898;">
-
-            <div class="cont-tit-wors">
-                <h3>OTROS PROYECTOS</h3>
-                <hr>
-            </div>
-            <div class="proyectos">
-                <p>En mis experiencias laborales anteriores y proyectos freelance, he colaborado en el diseño y
-                    desarrollo de diversos proyectos creativos. He trabajado en la creación de identidad de marca y
-                    materiales promocionales, adaptándome a las necesidades específicas de cada cliente.
-                </p>
-            </div>
-            <div class="cont-carrusel">
-                <div class="car-slider-box">
-                    <ul>
+    <!-- SECCIÓN: SKILLS & EXPERIENCIA -->
+    <section id="skills" class="section-skills">
+        <div class="container">
+            <h2 class="section-title" data-key="skills-title">Habilidades &amp; Experiencia</h2>
+            <p class="section-subtitle" data-key="skills-desc">Tecnologías, metodologías y trayectoria profesional en diseño y desarrollo.</p>
+            
+            <div class="skills-grid">
+                <div class="skills-column">
+                    <h3 data-key="skills-h3-stack">Stack Técnico</h3>
+                    <ul class="skills-list">
                         <li>
-                            <img src="carrusel/digital.jpg" alt="">
-                            <div class="car-texto">
-                                <h2>Social Media & Web</h2>
-                                <p>Banners, feeds, landing pages,<br>
-                                    ecommers, mailing...
-                                </p>
+                            <svg viewBox="0 0 24 24" class="skill-icon" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            <div class="skill-content">
+                                <span class="skill-title" data-key="skills-s1">Diseño Gráfico &amp; UX/UI</span>
+                                <p class="skill-text" data-key="skills-p1">Figma, Photoshop, Illustrator, InDesign, Wireframing, User Flows.</p>
                             </div>
                         </li>
                         <li>
-                            <img src="carrusel/print.jpg" alt="">
-                            <div class="car-texto">
-                                <h2>Print Design</h2>
-                                <p>Folletos, revistas, libros, <br>
-                                    packaging, backlight...
-                                </p>
+                            <svg viewBox="0 0 24 24" class="skill-icon" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg>
+                            <div class="skill-content">
+                                <span class="skill-title" data-key="skills-s2">Desarrollo Web &amp; Librerías</span>
+                                <p class="skill-text" data-key="skills-p2">HTML5, CSS3, JavaScript, Responsive Design, Bootstrap, GSAP, APIs.</p>
                             </div>
                         </li>
                         <li>
-                            <img src="carrusel/pop.jpg" alt="">
-                            <div class="car-texto">
-                                <h2>POP/BTL</h2>
-                                <p>Stands, exhibidores, afiches, <br>
-                                    cenefas, mobiles, pecheras...</p>
+                            <svg viewBox="0 0 24 24" class="skill-icon" fill="currentColor"><path d="M12 2.248c-5.385 0-9.754 4.367-9.754 9.752 0 4.307 2.793 7.962 6.666 9.252.487.089.667-.211.667-.47 0-.23-.009-.844-.014-1.656-2.714.59-3.287-1.309-3.287-1.309-.444-1.129-1.085-1.429-1.085-1.429-.885-.606.067-.594.067-.594.98.069 1.496 1.006 1.496 1.006.87 1.491 2.285 1.06 2.841.811.089-.63.342-1.06.621-1.305-2.167-.246-4.446-1.084-4.446-4.825 0-1.066.38-1.937 1.006-2.621-.101-.247-.436-1.24.095-2.585 0 0 .819-.262 2.684 1.001A9.345 9.345 0 0 1 12 6.852c.8.004 1.605.108 2.356.319 1.864-1.263 2.681-1.001 2.681-1.001.532 1.345.197 2.338.097 2.585.628.684 1.004 1.555 1.004 2.621 0 3.75-2.281 4.577-4.456 4.817.351.302.664.9.664 1.812 0 1.307-.012 2.362-.012 2.684 0 .261.178.565.673.469C19.21 19.957 22 16.304 22 11.999c0-5.385-4.366-9.751-9.75-9.751z"/></svg>
+                            <div class="skill-content">
+                                <span class="skill-title" data-key="skills-s3">Control de Versiones</span>
+                                <p class="skill-text" data-key="skills-p3">Git, GitHub.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" class="skill-icon" fill="currentColor"><path d="M7 19h10V4H7v15zm-5 0h3V6H2v13zM19 6v13h3V6h-3z"/></svg>
+                            <div class="skill-content">
+                                <span class="skill-title" data-key="skills-s4">DCO &amp; Animación</span>
+                                <p class="skill-text" data-key="skills-p4">Clinch.co, Assemble, Adobe Animate, After Effects, Google Web Designer.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" class="skill-icon" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                            <div class="skill-content">
+                                <span class="skill-title" data-key="skills-s5">Entorno &amp; Metodologías</span>
+                                <p class="skill-text" data-key="skills-p5">Mac-OS, Windows, Agile, Scrum, Jira, Microsoft 360.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" class="skill-icon" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.3 14.3a.996.996 0 0 1-1.41 0L11 12.41V7c0-.55.45-1 1-1s1 .45 1 1v4.59l3.29 3.29c.39.39.39 1.03 0 1.42z"/></svg>
+                            <div class="skill-content">
+                                <span class="skill-title" data-key="skills-s6">Idiomas</span>
+                                <p class="skill-text" data-key="skills-p6">Español (Nativo) e Inglés (Intermedio A2-B1).</p>
                             </div>
                         </li>
                     </ul>
-
+                </div>
+                <div class="skills-column">
+                    <h3 data-key="skills-h3-exp">Experiencia &amp; Certificados</h3>
+                    <ul class="experience-list">
+                        <li>
+                            <div class="skill-content">
+                                <span class="skill-title" data-key="skills-exp1-s">Hogarth Worldwide Argentina</span>
+                                <p class="skill-text" data-key="skills-exp1-p">Desarrollo de banners DCO &amp; Standard (Coca-Cola, Nespresso, La Nación).</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill-content">
+                                <span class="skill-title" data-key="skills-exp2-s">Ibris CGQ</span>
+                                <p class="skill-text" data-key="skills-exp2-p">Diseño Gráfico y UI (Natura, Mistral, Next).</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill-content">
+                                <span class="skill-title" data-key="skills-exp3-s">Promoption</span>
+                                <p class="skill-text" data-key="skills-exp3-p">BTL/POP y Producción Impresa (Unilever, Danone, Clarín).</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill-content">
+                                <span class="skill-title" data-key="skills-exp4-s">Certificaciones</span>
+                                <p class="skill-text" data-key="skills-exp4-p">Gen AI (Linkedin Learning, 2024), FrontEnd React (Coderhouse, 2023), Diseño Web (Udemy, 2021), Lic. Diseño Gráfico (FADU / UBA, 2009).</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="works" class="section"> 
+        <div class="container"> 
+            <h2 class="section-title" data-key="works-title">Campañas Digitales &amp; Display Ads</h2> 
+            <p class="section-subtitle" data-key="works-desc">Desarrollo de piezas interactivas y adaptaciones dinámicas para ecosistemas programáticos.</p> 
+            <div class="banner-grid"> 
+                <!-- Banner LN --> 
+                <div class="banner-card"> 
+                    <div class="iframe-wrapper"> 
+                        <iframe src="images/banners/ln/300x460/index.html" width="300" height="450" frameborder="0" scrolling="no"></iframe> 
+                    </div> 
+                    <div class="banner-info"> 
+                        <p class="label" data-key="works-label">Cliente:</p> 
+                        <h3>La Nación Campo</h3> 
+                        <h4 class="specialty" data-key="works-p1-spec">Anuncio Dinámico - API</h4> 
+                        <p class="project-text" data-key="works-p1-text">Anuncio interactivo con contenido dinámico en tiempo real integrando la API de "La Nación Campo". Realizado con HTML, CSS y Javascript.</p> 
+                    </div> 
+                </div> 
+                <!-- Banner Milka --> 
+                <div class="banner-card"> 
+                    <div class="iframe-wrapper"> 
+                        <iframe src="images/banners/milka/300x250/index.html" width="300" height="250" frameborder="0" scrolling="no"></iframe> 
+                    </div> 
+                    <div class="banner-info"> 
+                        <p class="label" data-key="works-label">Cliente:</p> 
+                        <h3>Milka</h3> 
+                        <h4 class="specialty" data-key="works-p2-spec">Standard HTML5</h4> 
+                        <p class="project-text" data-key="works-p2-text">Banner adaptable para Google Ads. Animación y desarrollo realizados con Google Web Designer. Optimización de imágenes.</p> 
+                    </div> 
+                </div> 
+                <!-- Banner CDW --> 
+                <div class="banner-card"> 
+                    <div class="iframe-wrapper"> 
+                        <iframe src="images/banners/cdw/300x250/index.html" width="300" height="250" frameborder="0" scrolling="no"></iframe> 
+                    </div> 
+                    <div class="banner-info"> 
+                        <p class="label" data-key="works-label">Cliente:</p> 
+                        <h3>CDW - Lenovo</h3> 
+                        <h4 class="specialty" data-key="works-p3-spec">Animación con GSAP</h4> 
+                        <p class="project-text" data-key="works-p3-text">Banner para Google Ads, realizado con HTML5, CSS y JavaScript. Animaciones con GSAP y adaptación a múltiples medidas.</p> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="adaptations-header"> 
+                <h3 data-key="adapt-title">Diseño Multiformato &amp; Master Layouts</h3> 
+                <p data-key="adapt-desc">Estrategia de adaptación visual y despliegue de activos para ecosistemas DV360.</p> 
+            </div> 
+            <div class="adaptations-wrapper-mobile"> 
+                <div class="adaptations-grid" id="adapt-grid"> 
+                    <div class="adaptation-item"><img src="images/banners/banners-dv360.jpg" alt="DV360" class="zoomable"></div> 
+                    <div class="adaptation-item"><img src="images/banners/banners-300x250.jpg" alt="300x250" class="zoomable"></div> 
+                    <div class="adaptation-item"><img src="images/banners/banners-300x600.jpg" alt="300x600" class="zoomable"></div> 
+                    <div class="adaptation-item"><img src="images/banners/banners-970x250.jpg" alt="970x250" class="zoomable"></div> 
+                </div> 
+                <div class="dots-container" id="dots-container"> 
+                    <span class="dot active" data-index="0"></span> 
+                    <span class="dot" data-index="1"></span> 
+                    <span class="dot" data-index="2"></span> 
+                    <span class="dot" data-index="3"></span> 
+                </div> 
+            </div> 
+            <!-- SECCIÓN: SOCIAL MEDIA --> 
+            <div class="social-media-header"> 
+                <h3 data-key="social-title">Social Media Content</h3> 
+                <p data-key="social-desc">Diseño de activos digitales para Feed e Stories. Curaduría visual y creación de contenido estratégico bajo estrictos lineamientos de marca (Ford Motors Co.) para potenciar el engagement.</p> 
+            </div> 
+            <div class="social-media-display"> 
+                <div class="adaptation-item full-width"> 
+                    <img src="images/socialMedia/socialMedia_01.jpg" alt="Social Media Ford Content" class="zoomable"> 
+                </div> 
+            </div> 
+        </div> 
+    </section> 
+
+    <section id="email-portfolio" class="section-alt"> 
+        <div class="container"> 
+            <h2 class="section-title" data-key="email-title">Diseño y Desarrollo de Emails HTML</h2> 
+            <p class="section-subtitle" data-key="email-desc">Creación de newsletters y campañas de email marketing profesionales, <br>100% responsivos y optimizados para garantizar la mejor entregabilidad y conversión.</p> 
+            <div class="email-grid"> 
+                <div class="email-card"> 
+                    <div class="email-image-wrapper"> 
+                        <img src="images/email/email.jpg" alt="Ejemplos de Emails HTML (Coca-Cola, Telus)" class="email-img zoomable"> 
+                    </div> 
+                    <div class="email-info"> 
+                        <p class="project-text" data-key="email-text">Estos son ejemplos de trabajos realizados para marcas como Coca-Cola y Telus, ilustran la capacidad de crear contenido atractivo y funcional para diversas campañas.</p> 
+                        <a href="images/email/email.html" target="_blank" class="btn-secondary" data-key="email-btn">VER HTML</a> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </section> 
+
+    <div id="lightbox" class="lightbox"> 
+        <span class="close-lightbox">×</span> 
+        <img class="lightbox-content" id="lightbox-img"> 
+    </div> 
+
+    <!-- SECCIÓN: ENLACE A BEHANCE -->
+<section id="behance-callout" class="section behance-section">
+  <div class="container text-center">
+    <h3 data-key="behance-title">¿Quieres ver más de mis proyectos de diseño?</h3>
+    <!-- <p data-key="behance-desc">Te invito a explorar mi universo creativo completo con marcas de primer nivel.</p> -->
+    <a href="https://www.behance.net/maticusmai" target="_blank" class="btn-behance">
+      Behance
+    </a>
+  </div>
+</section>
 
 
-            <!-- <div class="cont-gallery">
-                <div class="galery">
+    <section id="contact" class="section"> 
+        <div class="container"> 
+            <h2 class="section-title" data-key="contact-title">Hablemos</h2> 
+            <div class="contact-grid"> 
+                <a href="https://wa.me/5491130195479" class="contact-link" target="_blank"> 
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"> 
+                        <path d="M12.012 2c-5.508 0-9.987 4.479-9.987 9.987 0 1.763.461 3.42 1.262 4.853L2 22l5.335-1.4c1.391.76 2.974 1.2 4.677 1.2 5.508 0 9.987-4.479 9.987-9.987 0-5.508-4.479-9.987-9.987-9.987zM6.576 16.141l-.343-.545c-.784-1.245-1.197-2.687-1.197-4.188 0-4.391 3.571-7.962 7.962-7.962s7.962 3.571 7.962 7.962-3.571 7.962-7.962 7.962c-1.579 0-3.116-.462-4.444-1.336l-.478-.315-3.3.864.8-3.042z"></path> 
+                    </svg> WhatsApp 
+                </a> 
+                <a href="mailto:maticusmai@gmail.com" class="contact-link"> 
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"> 
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path> 
+                    </svg> Email 
+                </a> 
+                <a href="https://linkedin.com/in/maticusmai/" class="contact-link" target="_blank"> 
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor"> 
+                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a2.7 2.7 0 0 0-2.7-2.7c-1.1 0-1.8.6-2.1 1.1v-1h-3.3v7.9h3.3v-4.1c0-.6.4-1.1 1.1-1.1.7 0 1.1.5 1.1 1.1v4.1h3.3M6.7 8.3a1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6 1.6 1.6 0 0 0-1.6 1.6A1.6 1.6 0 0 0 6.7 8.3M8.3 18.5V9.6H5.1v8.9h3.2z"></path> 
+                    </svg> LinkedIn 
+                </a> 
+            </div> 
+        </div> 
+    </section> 
 
-                    <div>
-                        <div class="gal-cont-img"><img src="works/print/elizabetha.jpg" alt=""></div>
-                        <div class="cont-work-free">
-                            <p class="gallery-p-tit">Tienda Online</p>
-                            <p class="gallery-p">Diseño y desarrollo de sitio web responsive con e-commerce</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="gal-cont-img"><img src="works/print/makelawen.jpg" alt=""></div>
-                        <div class="cont-work-free">
-                            <p class="gallery-p-tit">Social Media</p>
-                            <p class="gallery-p">Diseño digital para redes sociales y plataformas web</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="gal-cont-img"><img src="works/print/cimientos.jpg" alt=""></div>
-                        <div class="cont-work-free">
-                            <p class="gallery-p-tit">Email design</p>
-                            <p class="gallery-p">Responsive design, A/B testing, Unsubscribe button</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div> -->
-            <br>
-            <div class="link-behance">
-                <a class="button-header oculto" href="https://www.behance.net/maticusmai" target="_blank">
-                    <h4 style="font-size: 20px;">+ Behance</h4>
-                </a>
-                <!-- <p>VER + <a href="https://www.behance.net/maticusmai" target="_blank">Behance.</a> </p> -->
-            </div>
-        </section>
-
-
-
-        <section class="cont-about">
-            <h3 style="color: rgba(172, 255, 47, 0.549); text-align: left; font-size: 27px; margin-left: 3%;">Áreas de especialización</h3>
-
-            <div class="cont-div-formacion">
-
-                <div class="formacion">
-                    <h3>Experiencia en la industria</h3>
-                    <div class="item-formacion">
-                        <h4>Desarrollo de banners</h4>
-                        <p>DCO & Standard banners</p>
-                    </div>
-                    <div class="item-formacion">
-                        <h4>Desarrollo Web</h4>
-                        <p>Websites, emailing</p>
-                    </div>
-                    <div class="item-formacion">
-                        <h4>Producción Impresa</h4>
-                        <p>Offset y Digital</p>
-                    </div>
-                    <div class="item-formacion">
-                        <h4>Diseño Publicitario</h4>
-                        <p>BTL y Material POP</p>
-                    </div>
-                </div>
-
-                <div class="formacion">
-                    <h3>Certificaciones</h3>
-                    <div class="item-formacion">
-                        <h4>2024 - Linkedin Learning</h4>
-                        <p>Generative AI </p>
-                    </div>
-                    <div class="item-formacion">
-                        <h4>2023 - CODERHOUSE</h4>
-                        <p>Desarrollo FrontEnd – React </p>
-                    </div>
-                    <div class="item-formacion">
-                        <h4>2021 - UDEMY</h4>
-                        <p>Diseño Web</p>
-                    </div>
-                    <div class="item-formacion">
-                        <h4>2009 - FADU / UBA</h4>
-                        <p>Diseño Gráfico</p>
-                    </div>
-                </div>
-
-                <div class="formacion">
-                    <h3>Experiencia Relevante</h3>
-                    <div class="item-formacion">
-                        <h4>Hogarth Worldwide Argentina</h4>
-                        <p>DCO & Std Banners <br>
-                            (Coca-Cola, Nespresso, La Nación, and more)</p>
-                    </div>
-                    <div class="item-formacion">
-                        <h4>Ibris CGQ</h4>
-                        <p>Diseño Gráfico | UI <br>
-                            (Natura, Mistral, Next and More)</p>
-                    </div>
-                    <div class="item-formacion">
-                        <h4>Promoption</h4>
-                        <p>BTL/POP | Print <br>
-                            (Unilever, Danone, Clarin and More)</p>
-                    </div>
-
-                </div>
-            </div>
-
-
-
-            <div class="skills-section">
-                <div>
-                    <h2>Habilidades</h2>
-                    <p class="pintado"><span>Me destaco en una gran variedad de competencias.</span></p>
-                </div>
-                <div class="cont-cuadros">
-                    <div class="skill-blok">
-                        <p class="titulo">Desarrollo Web</p>
-                        <p class="sk">HTML, CSS, JavaScript, Responsive, Git, GitHub, Api, DB</p>
-                    </div>
-                    <div class="skill-blok">
-                        <p class="titulo">Librerías</p>
-                        <p class="sk">Bootstrap, JQuery, Tailwind, GSAP</p>
-                    </div>
-                    <div class="skill-blok">
-                        <p class="titulo">UX/UI</p>
-                        <p class="sk">Bocetos, prototipos, análisis de flujo de usuarios</p>
-                    </div>
-                    <div class="skill-blok">
-                        <p class="titulo">Diseño Gráfico</p>
-                        <p class="sk">Adobe Photoshop, Illustrator, Indesign</p>
-                    </div>
-                    <div class="skill-blok">
-                        <p class="titulo">Animación</p>
-                        <p class="sk">Adobe Animate, After Effects, Google Web Designer</p>
-                    </div>
-                    <div class="skill-blok">
-                        <p class="titulo">Idiomas</p>
-                        <p class="sk">Inglés A2-B1, Español Nativo</p>
-                    </div>
-                    <div class="skill-blok">
-                        <p class="titulo">Atributos Extra</p>
-                        <p class="sk">Mac-OS, Windows, Agile, Scrum, Microsoft 360, Jira</p>
-                    </div>
-
-                </div>
-            </div>
-
-        </section>
-
-        <section class="contact about">
-            <div>
-                <h3>Contacto</h3>
-                
-                <p>Enviame un email a <a href="mailto:maticusmai@gmail.com" target="_blank">maticusmai@gmail.com</a>
-                </p>
-                <p>Whatsapp al <a href="https://api.whatsapp.com/send?phone=541130195479" target="_blank">+54 11
-                        3019-5479</a> </p>
-                <p>Referencias por <a href="https://www.linkedin.com/in/maticusmai/" target="_blank">Linkedin.</a> </p>
-                <a class="button-header cv" href="img/MatiasCusmai_cv_2025.pdf" target="_blank">
-                    <h4>CURRICULUM VITAE</h4>
-                </a>
-
-            </div>
-        </section>
-
-
-    </main>
-    <script src="js/swiper-bundle.min.js"></script>
-    <script>
-        let swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
-</body>
-
+    <footer> 
+        <p>© <span id="year"></span> Matias Cusmai - Visual Designer &amp; Dev.</p> 
+    </footer> 
+    <script src="script.js"></script> 
+</body> 
 </html>
+
+
