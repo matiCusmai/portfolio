@@ -1,6 +1,7 @@
 :root {
     --bg-white: #ffffff;
     --bg-light: #f4f4f4;
+    --bg-grey: #007aff21;
     --text-color: #1a1a1a;
     --accent-color: #007AFF;
     --font-main: 'Inter', sans-serif;
@@ -63,11 +64,11 @@ section p.section-desc,
 
 .section-skills {
     background-color: var(--bg-white);
-    padding: 120px 5%
+    padding: 40px 5%
 }
 
 #works {
-    background-color: var(--bg-light)
+    background-color: var(--bg-grey)
 }
 
 #email-portfolio {
@@ -80,8 +81,10 @@ section p.section-desc,
 }
 
 #contact {
-    background-color: var(--bg-white)
+    background-color: var(--bg-light)
 }
+
+.border-top {  border-top: 1px solid #eee }
 
 .navbar {
     display: flex;
@@ -309,6 +312,8 @@ h1 {
     letter-spacing: -0.3px
 }
 
+.section-subtitle {font-size: 1.05rem; color: #666; margin-bottom: 48px}
+
 .skills-list,
 .experience-list {
     list-style: none;
@@ -491,6 +496,7 @@ h1 {
     width: 10px;
     height: 10px;
     background: #ddd;
+    border: 1px solid #ababb4;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s

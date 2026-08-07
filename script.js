@@ -230,7 +230,7 @@ const translations = {
         "nav-skills": "Skills",
         "nav-works": "Works",
         "nav-contact": "Contact",
-        "hero-tagline": "Visual Designer & Front-end Developer",
+        "hero-tagline": "Visual Designer <br>& Front-end Developer",
         "hero-sub": "Specialized in UX/UI, Motion Graphics, and AI implementation.",
         "hero-cv": "Resume",
         "about-title": "About my approach",
