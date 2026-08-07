@@ -31,24 +31,62 @@ const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const closeBtn = document.querySelector('.close-lightbox');
 
-document.querySelectorAll('.zoomable').forEach(image => {
-    image.addEventListener('click', () => {
-        if (window.innerWidth > 768) {
-            lightbox.classList.add('active');
+if (lightbox && lightboxImg) {
+    // Inicializar listeners en todos los elementos escalables (Mobile + Desktop)
+    document.querySelectorAll('.zoomable').forEach(image => {
+        image.style.cursor = 'zoom-in'; 
+        image.addEventListener('click', () => {
             lightboxImg.src = image.src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Evita scroll molesto detrás del modal
+        });
+    });
+
+    // Función de cierre unificada limpia
+    const closeLightboxView = () => {
+        lightbox.classList.remove('active');
+        lightbox.classList.remove('zoomed'); 
+        lightboxImg.style.transform = 'none';
+        document.body.style.overflow = ''; // Restablece comportamiento de scroll general
+    };
+
+    // Evento de cierre sobre el botón X
+    if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeLightboxView();
+        });
+    }
+
+    // Evento de cierre al tocar el fondo opaco
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightboxView();
         }
     });
-});
 
-if (closeBtn) {
-    closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
-}
+    // Gestos Táctiles: Simulación de Double Tap (Doble toque rápido para Zoom)
+    let lastTap = 0;
+    lightboxImg.addEventListener('touchend', (e) => {
+        const currentTime = new Date().getTime();
+        const tapLength = currentTime - lastTap;
+        
+        if (tapLength < 300 && tapLength > 0) {
+            e.preventDefault();
+            lightbox.classList.toggle('zoomed');
+        }
+        lastTap = currentTime;
+    });
 
-if (lightbox) {
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) lightbox.classList.remove('active');
+    // Control de Orientación: Limpia distorsiones si el usuario gira el celular con el modal abierto
+    window.addEventListener('orientationchange', () => {
+        if (lightbox.classList.contains('active')) {
+            lightbox.classList.remove('zoomed');
+            lightboxImg.style.transform = 'none';
+        }
     });
 }
+
 
 // ==========================================================================
 // 📍 LÓGICA DE PUNTOS Y SCROLL MOBILE
@@ -58,6 +96,7 @@ const dots = document.querySelectorAll('.dot');
 const items = document.querySelectorAll('.adaptation-item');
 
 if (grid && dots.length > 0) {
+    // Scroll suave al hacer clic en los puntos (dots)
     dots.forEach(dot => {
         dot.addEventListener('click', () => {
             const index = parseInt(dot.getAttribute('data-index'));
@@ -66,6 +105,7 @@ if (grid && dots.length > 0) {
         });
     });
 
+    // Sincronización de puntos mediante IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -79,6 +119,50 @@ if (grid && dots.length > 0) {
     }, { root: grid, threshold: 0.6 });
 
     items.forEach(item => observer.observe(item));
+
+    // --- SISTEMA DE SWIPE FORZADO POR COMPORTAMIENTO TÁCTIL ---
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    // Soporte para simulación con Mouse en DevTools
+    grid.addEventListener('mousedown', (e) => {
+        isDown = true;
+        grid.style.scrollBehavior = 'auto'; // Desactiva el snap temporalmente para fluidez
+        startX = e.pageX - grid.offsetLeft;
+        scrollLeft = grid.scrollLeft;
+    });
+    
+    grid.addEventListener('mouseleave', () => { isDown = false; grid.style.scrollBehavior = 'smooth'; });
+    grid.addEventListener('mouseup', () => { isDown = false; grid.style.scrollBehavior = 'smooth'; });
+    
+    grid.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - grid.offsetLeft;
+        const walk = (x - startX) * 1.5; // Multiplicador de velocidad de arrastre
+        grid.scrollLeft = scrollLeft - walk;
+    });
+
+    // Soporte nativo para eventos Touch (Dedo real y Círculo Gris de DevTools)
+    grid.addEventListener('touchstart', (e) => {
+        isDown = true;
+        grid.style.scrollBehavior = 'auto';
+        startX = e.touches[0].pageX - grid.offsetLeft;
+        scrollLeft = grid.scrollLeft;
+    }, { passive: true });
+
+    grid.addEventListener('touchend', () => {
+        isDown = false;
+        grid.style.scrollBehavior = 'smooth';
+    });
+
+    grid.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+        const x = e.touches[0].pageX - grid.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        grid.scrollLeft = scrollLeft - walk;
+    }, { passive: true });
 }
 
 // ==========================================================================

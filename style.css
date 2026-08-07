@@ -676,103 +676,201 @@ footer {
     border-top: 1px solid #eee
 }
 
-@media(max-width:768px) {
-    .menu-toggle {
-        display: flex
-    }
-
-    .hero {
-        padding-top: 120px;
-        min-height: auto
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
-        background: white;
-        flex-direction: column;
-        justify-content: center;
-        gap: 40px;
-        transition: 0.4s
-    }
-
-    .nav-links.active {
-        right: 0
-    }
-
-    .adaptations-grid {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 0;
-        scrollbar-width: none
-    }
-
-    .adaptations-grid::-webkit-scrollbar {
-        display: none
-    }
-
-    .adaptation-item {
-        flex: 0 0 100%;
-        scroll-snap-align: center;
-        background: transparent;
-        box-shadow: none;
-        padding: 0 20px;
-        cursor: default
-    }
-
-    .dots-container {
-        display: flex
-    }
-
-    .email-grid {
-        grid-template-columns: 1fr
-    }
-
-    .email-image-wrapper {
-        height: 300px
-    }
-
-    .email-card {
-        max-width: 100%
-    }
-
-    .skills-grid {
-        flex-direction: column;
-        gap: 32px
-    }
-}
-
-/* Animación fluida que atraviesa el texto */
-.section-title[data-key="about-title"] {
-    display: inline-block;
-    /* Gradiente con más "aire" de azul a los costados */
-    background: linear-gradient(
+/* ========================================================================== */
+/* ✨ ANIMACIÓN SHIMMER (Fuera de la MQ para que no se rompa nunca) */
+/* ========================================================================== */
+.section-title[data-key="about-title"] { 
+    display: inline-block; 
+    background: linear-gradient( 
         90deg, 
         #007AFF 0%, 
         #007AFF 25%, 
         #00d4ff 45%, 
         #a155ff 55%, 
         #007AFF 75%, 
-        #007AFF 100%
-    );
-    background-size: 400% auto; /* Aumentamos el tamaño para que el recorrido sea total */
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+        #007AFF 100% 
+    ); 
+    background-size: 400% auto; 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    animation: rainbow-flow 8s ease-in-out infinite; 
+} 
+
+@keyframes rainbow-flow { 
+    0% { background-position: 100% center; } 
+    40% { background-position: 0% center; } 
+    100% { background-position: 0% center; } 
+}
+
+
+
+@media(max-width:768px) {
+    /* --- 1. Espaciado Hero a Aboutme --- */
+    .hero { 
+        padding-top: 120px; 
+        min-height: auto;
+        padding-bottom: 90px; 
+    }
+
+    /* --- 2. Reducción de padding general entre secciones --- */
+    .section, .section-alt, .behance-section {
+        padding-top: 45px !important;
+        padding-bottom: 45px !important;
+    }
+
+    /* --- 3. Espacio ampliado antes del Stack Técnico --- */
+    [data-key="adapt-desc"], .adaptations-header p {
+        margin-bottom: 50px !important; 
+    }
+
+    .menu-toggle { display: flex }
     
-    animation: rainbow-flow 8s ease-in-out infinite;
-}
+    .nav-links { 
+        position: fixed; 
+        top: 0; 
+        right: -100%; 
+        width: 100%; 
+        height: 100vh; 
+        background: white; 
+        flex-direction: column; 
+        justify-content: center; 
+        gap: 40px; 
+        transition: 0.4s 
+    }
+    
+    .nav-links.active { right: 0 }
 
-@keyframes rainbow-flow {
-    /* Empieza fuera a la izquierda */
-    0% { background-position: 100% center; }
-    /* Atraviesa todo el texto hasta el 40% del tiempo */
-    40% { background-position: 0% center; }
-    /* Se queda en azul el resto del tiempo (pausa elegante) */
-    100% { background-position: 0% center; }
-}
+    /* --- 4. Refactor de Galerías Táctiles (Formato Instagram) --- */ 
+    .adaptations-wrapper-mobile, .social-media-display { 
+        position: relative; 
+        width: 100vw; 
+        left: 50%; 
+        right: 50%; 
+        margin-left: -50vw; 
+        margin-right: -50vw; 
+        overflow: hidden; 
+    } 
 
+    /* Aquí integramos el nuevo control de scroll y cursores para el JS */
+    .adaptations-grid { 
+        display: flex !important; 
+        flex-direction: row !important; 
+        overflow-x: scroll !important; /* Forzamos el canal de scroll explícito */ 
+        overflow-y: hidden !important; 
+        scroll-snap-type: x mandatory; 
+        gap: 12px; 
+        scrollbar-width: none; 
+        padding: 0 16px; 
+        -webkit-overflow-scrolling: touch; 
+        user-select: none; /* Evita que el navegador intente arrastrar la imagen como archivo */
+        cursor: grab;
+    } 
+    
+    .adaptations-grid:active {
+        cursor: grabbing;
+    }
+
+    .adaptations-grid::-webkit-scrollbar { display: none } 
+
+    .adaptation-item { 
+        flex: 0 0 calc(100vw - 32px) !important; 
+        width: calc(100vw - 32px) !important; 
+        scroll-snap-align: center; 
+        background: transparent; 
+        box-shadow: none; 
+        padding: 0 !important; 
+        box-sizing: border-box; 
+    }
+
+    /* Ajuste específico para Social Media Content (Ford) */
+    .social-media-display .adaptation-item.full-width {
+        flex: 0 0 100vw !important;
+        width: 100vw !important;
+        padding: 0 16px !important;
+    }
+
+    .adaptation-item img {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 8px; 
+        object-fit: cover;
+        display: block;
+    }
+
+    .dots-container { 
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+    }
+
+    .email-grid { grid-template-columns: 1fr }
+    .email-image-wrapper { height: 300px }
+    .email-card { max-width: 100% }
+    .skills-grid { flex-direction: column; gap: 32px }
+
+    /* --- Sistema de Lightbox Mobile --- */
+    #lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100dvh; 
+        background: rgba(0, 0, 0, 0.95);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        touch-action: none; 
+    }
+
+    #lightbox.active {
+        display: flex;
+    }
+
+    #lightbox-img {
+        max-width: 100%;
+        max-height: 82vh;
+        object-fit: contain;
+        transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    #lightbox.zoomed #lightbox-img {
+        transform: scale(2.2);
+    }
+
+    .close-lightbox {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 44px;
+        height: 44px;
+        background: rgba(255, 255, 255, 0.15);
+        border: none;
+        color: white;
+        font-size: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10000;
+        line-height: 1;
+    }
+
+    @media (orientation: landscape) {
+        #lightbox-img {
+            max-height: 96dvh;
+            width: auto;
+        }
+        .close-lightbox {
+            top: 12px;
+            right: 12px;
+            width: 38px;
+            height: 38px;
+            font-size: 22px;
+        }
+    }
+}
